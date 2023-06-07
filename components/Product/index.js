@@ -24,7 +24,7 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
-      <p>Review: {data.reviews}</p>
+      <p>Review: {data.reviews.text ? data.reviews.text : null}</p>
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );

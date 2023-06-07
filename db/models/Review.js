@@ -2,13 +2,12 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const productReview = new Schema({
+const reviewSchema = new Schema({
   title: { type: String, required: true },
   text: { type: String, required: true },
   rating: { type: Number, required: true },
 });
 
-const Review =
-  mongoose.models.Review || mongoose.model("Review", productReview);
+const Review = mongoose.models.Review || mongoose.model("Review", reviewSchema);
 
-export default Product;
+export default Review;
