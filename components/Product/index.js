@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { ProductCard } from "./Product.styled";
 import { StyledLink } from "../Link/Link.styled";
 
-//I forgot to import the component  COmmenta and use it in the Card, now the Reviews work.
+//I forgot to import the component  Comment and use it in the Product, now the Reviews work.
 import Comments from "../Comments";
 
 export default function Product() {
