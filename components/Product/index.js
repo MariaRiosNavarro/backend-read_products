@@ -3,6 +3,9 @@ import { useRouter } from "next/router";
 import { ProductCard } from "./Product.styled";
 import { StyledLink } from "../Link/Link.styled";
 
+//I forgot to import the component  COmmenta and use it in the Card, now the Reviews work.
+import Comments from "../Comments";
+
 export default function Product() {
   const router = useRouter();
   const { id } = router.query;
@@ -24,7 +27,7 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
-      <p>Review: {data.reviews.text ? data.reviews.text : null}</p>
+      {data.reviews.length > 0 && <Comments reviews={data.reviews} />}
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
